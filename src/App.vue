@@ -22,7 +22,7 @@ const brands = ref(["YouTube", "Discord", "X", "GitHub"])
       </div>
     </div>
     <div class="navbar-end">
-      <a v-for="brand in brands" class="navbar-item brand-logo" :href="'https://mmodding.com' + brand.toLowerCase()">
+      <a v-for="brand in brands" class="navbar-item brand-logo" :href="'https://mmodding.com/' + brand.toLowerCase()">
         <img :src="'./' + brand.toLowerCase() + '.png'" :alt="brand + ' Logo'">
       </a>
     </div>
