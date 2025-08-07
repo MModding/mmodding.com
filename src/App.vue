@@ -9,7 +9,7 @@ const brands = ref(["YouTube", "Discord", "X", "GitHub"])
 <template>
   <nav class="navbar is-transparent has-navbar-fixed-top is-black" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://mmodding.com">
+      <a class="navbar-item" href="/">
         <img :src="artRoot + '/brand/mmodding_title.png'" alt="MModding Title">
       </a>
     </div>
@@ -22,7 +22,7 @@ const brands = ref(["YouTube", "Discord", "X", "GitHub"])
       </div>
     </div>
     <div class="navbar-end">
-      <a v-for="brand in brands" class="navbar-item brand-logo" :href="'https://mmodding.com/' + brand.toLowerCase()">
+      <a v-for="brand in brands" class="navbar-item brand-logo" :href="'/' + brand.toLowerCase()">
         <img :src="'./' + brand.toLowerCase() + '.png'" :alt="brand + ' Logo'">
       </a>
     </div>
