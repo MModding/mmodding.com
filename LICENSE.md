@@ -8,7 +8,7 @@ All rights reserved.
 
 ### Are Considered As Assets:
 ```
-- All files under the `./public`  Directory excluding "discord.png", "github.png", "x.png" & "youtube.png" that belongs to their respective brands.
+- All files under the `./public` Directory.
 - All files under the `./src/assets` Directory.
 ```
 

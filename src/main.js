@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router.js'
 import "./style/main.scss"
 
-createApp(App)
-    .use(router)
-    .mount('#app')
+const app = createApp(App);
+
+app.config.globalProperties.$artRoot = "https://raw.githubusercontent.com/MModding/art/main";
+
+app.use(router).mount('#app')
