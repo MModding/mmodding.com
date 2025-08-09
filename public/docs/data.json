@@ -1,0 +1,69 @@
+[
+  {
+    "project": "MModding Library",
+    "id": "library",
+    "versions": {
+      "0.0.1-alpha": {
+        "categories": [
+          "beginning",
+          "core",
+          "util"
+        ],
+        "content": {
+          "introduction": {
+            "title": "Introduction",
+            "category": "core"
+          },
+          "create-the-main-class": {
+            "title": "Create the Main Class",
+            "category": "core",
+            "children": {
+              "use-element-initializers": "Use Elements Initializers",
+              "use-custom-blockentity-types": "Use Custom BlockEntity Types"
+            }
+          },
+          "use-custom-enchantments": {
+            "title": "Use Custom Enchantments",
+            "category": "util",
+            "children": {
+              "enchantment-type": "Enchantment Type"
+            }
+          }
+        }
+      },
+      "0.0.2-alpha": {
+        "categories": [
+          "core"
+        ],
+        "content": {
+          "introduction": {
+            "title": "Introduction",
+            "category": "core",
+            "children": {
+              "create-the-main-class": "Create the Main Class",
+              "manage-elements-with-elements-initializers": "Mange Elements with Elements Initializers",
+              "client-side-and-server-side-management": "Client-Side and Server-Side Management"
+            }
+          }
+        }
+      },
+      "0.1.0-alpha": {
+        "categories": [
+          "beginning",
+          "core"
+        ],
+        "content": {
+          "introduction": {
+            "title": "Introduction",
+            "category": "beginning",
+            "children": {
+              "mmodding-prerequisites": "MModding Prerequisites",
+              "toolchain-tutorials": "Toolchain Tutorials",
+              "installing-the-library": "Installing the Library"
+            }
+          }
+        }
+      }
+    }
+  }
+]
