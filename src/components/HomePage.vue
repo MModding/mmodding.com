@@ -24,6 +24,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 10px;
 }
 img {
   width: 30vh;
