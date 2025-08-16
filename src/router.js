@@ -1,7 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 
 import HomePage from "@/components/HomePage.vue";
-import DocumentationPage from "@/components/documentation/DocumentationPage.vue";
 
 import YouTubeRedirector from "@/components/redirectors/YouTubeRedirector.vue";
 import DiscordRedirector from "@/components/redirectors/DiscordRedirector.vue";
@@ -13,11 +12,6 @@ const routes = [
         path: "/",
         name: "home",
         component: HomePage
-    },
-    {
-        path: "/docs",
-        name: "documentation",
-        component: DocumentationPage
     },
     {
         path: "/youtube",

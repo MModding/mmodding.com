@@ -4,7 +4,7 @@
 <template>
   <div class="logo-container">
     <div class="logo-title">
-      <img :src="$artRoot + '/brand/mmodding.png'" alt="MModding Title">
+      <img src="/src/assets/logo.png" alt="MModding Title">
       <h1 class="bulma-title is-1">Injecting our imagination into Minecraft.</h1>
       <p>With multiple projects.</p>
       <h2>You can view them on <a href="https://modrinth.com">Modrinth</a> and <a href="https://curseforge.com">CurseForge</a>:</h2>

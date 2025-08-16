@@ -23,22 +23,33 @@ const brands = ref([
     icon: "github"
   }
 ])
+
+const switchDropdownState = (event) => {
+  event.currentTarget.classList.toggle("is-active")
+}
 </script>
 
 <template>
-  <nav class="navbar is-transparent has-navbar-fixed-top is-black" role="navigation" aria-label="main navigation">
+  <nav class="navbar has-navbar-fixed-top is-black" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <RouterLink class="navbar-item" to="/">
-        <img :src="$artRoot + '/brand/mmodding_title.png'" alt="MModding Title">
+        <img src="/src/assets/banner.png" alt="MModding Title">
       </RouterLink>
     </div>
     <div class="navbar-start">
-      <div class="navbar-item has-dropdown is-hoverable">
-        <RouterLink class="navbar-link" to="/docs">Documentation</RouterLink>
-        <div class="navbar-dropdown">
-          <p class="navbar-item">Example</p>
+      <div class="navbar-item has-dropdown is-active" @click="switchDropdownState">
+        <p class="navbar-link">Guides</p>
+        <div class="navbar-dropdown is-boxed">
+          <a class="navbar-item" href="https://wiki.mmodding.com">Mod Wikis</a>
+          <a class="navbar-item" href="https://docs.mmodding.com">Dev Docs</a>
         </div>
       </div>
+      <!--
+      <RouterLink class="navbar-item" to="/projects">Projects</RouterLink>
+      <RouterLink class="navbar-item" to="/team">Team</RouterLink>
+      <RouterLink class="navbar-item" to="/timeline">Timeline</RouterLink>
+      <RouterLink class="navbar-item" to="/about">About</RouterLink>
+      -->
     </div>
     <div class="navbar-end">
       <RouterLink v-for="brand in brands" class="navbar-item brand-logo" :to="'/' + brand.id">
@@ -51,6 +62,12 @@ const brands = ref([
 <style scoped>
 .brand-logo {
   --bulma-navbar-item-img-max-height: 2.0rem;
+}
+p {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 i {
   font-size: 30px;
