@@ -37,7 +37,7 @@ const switchDropdownState = (event) => {
       </RouterLink>
     </div>
     <div class="navbar-start">
-      <div class="navbar-item has-dropdown is-active" @click="switchDropdownState">
+      <div class="navbar-item has-dropdown" @click="switchDropdownState">
         <p class="navbar-link">Guides</p>
         <div class="navbar-dropdown is-boxed">
           <a class="navbar-item" href="https://wiki.mmodding.com">Mod Wikis</a>
