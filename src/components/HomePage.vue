@@ -3,15 +3,13 @@
 
 <template>
   <div class="logo-container">
-    <div class="logo-title">
-      <img src="/src/assets/logo.png" alt="MModding Title">
-      <h1 class="bulma-title is-1">Injecting our imagination into Minecraft.</h1>
-      <p>With multiple projects.</p>
-      <h2>You can view them on <a href="https://modrinth.com">Modrinth</a> and <a href="https://curseforge.com">CurseForge</a>:</h2>
-      <div class="project-websites">
-        <a class="button is-outlined modrinth" href="https://modrinth.com/organization/mmodding">View Modrinth Projects</a>
-        <a class="button is-outlined curseforge" href="https://www.curseforge.com/members/mmoddingteam/projects">View CurseForge Projects</a>
-      </div>
+    <img src="/src/assets/logo.png" alt="MModding Title">
+    <h1>Injecting our imagination into Minecraft.</h1>
+    <p>With multiple projects.</p>
+    <h2>You can view them on <a href="https://modrinth.com">Modrinth</a> and <a href="https://curseforge.com">CurseForge</a>:</h2>
+    <div class="project-websites">
+      <a class="button is-outlined modrinth" href="https://modrinth.com/organization/mmodding">View Modrinth Projects</a>
+      <a class="button is-outlined curseforge" href="https://www.curseforge.com/members/mmoddingteam/projects">View CurseForge Projects</a>
     </div>
   </div>
 </template>
@@ -21,14 +19,11 @@
 
 .logo-container {
   display: flex;
-  justify-content: center;
-}
-.logo-title {
-  display: flex;
   flex-direction: column;
   height: 60vh;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 img {
   width: 30vh;
@@ -47,16 +42,26 @@ h2 {
 .project-websites {
   padding-top: 10px;
   display: flex;
-  justify-content: space-between;
-  justify-items: stretch;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .button.modrinth {
+  width: 225px;
   border-color: rgb(27, 218, 106);
   color: rgb(27, 218, 106);
 }
 .button.curseforge {
+  width: 225px;
   border-color: rgb(255, 120, 77);
   color: rgb(255, 120, 77);
+}
+
+@media (max-width: 1024px) {
+  .logo-container {
+    height: 80vh;
+  }
+  .project-websites {
+    flex-direction: column;
+  }
 }
 </style>
