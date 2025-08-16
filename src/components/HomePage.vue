@@ -1,9 +1,28 @@
 <script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+
+const isDarkTheme = ref(false);
+
+onMounted(() => {
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  isDarkTheme.value = mediaQuery.matches;
+
+  const themeModificationHandler = (event) => {
+    isDarkTheme.value = event.matches;
+  };
+
+  mediaQuery.addEventListener('change', themeModificationHandler);
+
+  onUnmounted(() => {
+    mediaQuery.removeEventListener('change', themeModificationHandler);
+  });
+})
 </script>
 
 <template>
   <div class="logo-container">
-    <img src="/src/assets/logo.png" alt="MModding Title">
+    <img v-if="isDarkTheme" src="/src/assets/logo_dark.png" alt="MModding Title">
+    <img v-else src="/src/assets/logo_light.png" alt="MModding Title">
     <h1>Injecting our imagination into Minecraft.</h1>
     <p>With multiple projects.</p>
     <h2>You can view them on <a href="https://modrinth.com">Modrinth</a> and <a href="https://curseforge.com">CurseForge</a>:</h2>

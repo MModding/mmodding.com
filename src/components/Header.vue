@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue"
+import { ref } from "vue";
 
 const brands = ref([
   {
@@ -22,16 +22,16 @@ const brands = ref([
     id: "github",
     icon: "github"
   }
-])
+]);
 
 const switchNavbarState = (event) => {
   event.currentTarget.classList.toggle("is-active")
   event.currentTarget.parentElement.parentElement.children.item(1).classList.toggle("is-active")
-}
+};
 
 const switchDropdownState = (event) => {
   event.currentTarget.classList.toggle("is-active")
-}
+};
 </script>
 
 <template>
