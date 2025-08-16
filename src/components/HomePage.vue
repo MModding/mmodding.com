@@ -4,17 +4,17 @@ import { ref, onMounted, onUnmounted } from "vue";
 const isDarkTheme = ref(false);
 
 onMounted(() => {
-  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
   isDarkTheme.value = mediaQuery.matches;
 
   const themeModificationHandler = (event) => {
     isDarkTheme.value = event.matches;
   };
 
-  mediaQuery.addEventListener('change', themeModificationHandler);
+  mediaQuery.addEventListener("change", themeModificationHandler);
 
   onUnmounted(() => {
-    mediaQuery.removeEventListener('change', themeModificationHandler);
+    mediaQuery.removeEventListener("change", themeModificationHandler);
   });
 })
 </script>

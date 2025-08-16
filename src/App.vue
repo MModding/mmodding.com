@@ -1,10 +1,12 @@
 <script setup>
-import Header from "@/components/Header.vue";
+import WebsiteHeader from "@/components/WebsiteHeader.vue";
+import WebsiteFooter from "@/components/WebsiteFooter.vue";
 </script>
 
 <template>
-  <Header/>
+  <WebsiteHeader/>
   <RouterView/>
+  <WebsiteFooter/>
 </template>
 
 <style scoped>
