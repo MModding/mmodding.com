@@ -56,6 +56,7 @@ const switchDropdownState = (event) => {
             <a class="navbar-item" href="https://docs.mmodding.com">Dev Docs</a>
           </div>
         </div>
+        <a class="navbar-item" href="https://maven.mmodding.com" target="_blank">Maven Repository</a>
         <!--
         <RouterLink class="navbar-item" to="/projects">Projects</RouterLink>
         <RouterLink class="navbar-item" to="/team">Team</RouterLink>
